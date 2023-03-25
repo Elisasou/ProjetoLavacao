@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+                  <MenuItem fx:id="menuItemCadastroClientes" mnemonicParsing="false" onAction="#handleMenuItemCadastroCliente" text="Clientes" />
+                  <MenuItem fx:id="menuItemCadastroVeiculos" mnemonicParsing="false" onAction="#handelMenuItemCadastroVeiculos" text="Veículos" />
+                  <Menu mnemonicParsing="false" text="Preço da Lavação">
+                    <items>
+                      <MenuItem fx:id="menuItemCadastroLavacaoInterior" mnemonicParsing="false" onAction="#handleMenuItemCadastroLavacaoInterior" text="Lavação interior" />
+                        <MenuItem fx:id="menuItemCadastroLavacaoExterior" mnemonicParsing="false" onAction="#handleMenuItemCadastroLavacaoExterior" text="Lavação exterior" />
+                        <MenuItem fx:id="menuItemCadastroLavacaoCompleta" mnemonicParsing="false" onAction="#handleMenuItemCadastroLavacaoCompleta" text="Lavação completa" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="menuItemCadastroEditarCadastros" mnemonicParsing="false" onAction="#handleMenuItemCadastroEditarCadastros" text="Editar Cadastros" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Processos">
+            <items>
+                  <Menu fx:id="menuProcessosOrdemdeServicos" mnemonicParsing="false" onAction="#handleMenuProcessosOrdemdeServicos" text="Ordem de Serviços">
+                    <items>
+                      <MenuItem fx:id="menuItemProcessosNovaOrdemdeServicos" mnemonicParsing="false" onAction="#handleMenuItemProcessosNovaOrdemdeServicos" text="Nova Ordem de Serviço" />
+                        <MenuItem fx:id="mIMOSMProcessosEditarOrdensdeServiços" mnemonicParsing="false" onAction="#handlemIMOSMProcessosEditarOrdensdeServiços" text="Editar Ordens de Serviço" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="mProcessosMLavacoes" mnemonicParsing="false" text="Lavações Realizadas">
+                    <items>
+                      <MenuItem fx:id="menuItemProcessosVeiculosDevolvidos" mnemonicParsing="false" onAction="#handleMenuItemProcessosVeiculosDevolvidos" text="Veículos Devolvidos" />
+                        <MenuItem fx:id="menuItemProcessosVeiculosARetirar" mnemonicParsing="false" onAction="#handleMenuItemProcessosVeiculosARetirar" text="Veículos a Retirar" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Pagamento">
+               <items>
+                  <MenuItem fx:id="menuItemPagamentoDinheiro" mnemonicParsing="false" onAction="#handlemenuItemPagamentoDinheiro" text="Dinheiro" />
+                  <Menu mnemonicParsing="false" text="Cartão">
+                     <items>
+                        <MenuItem fx:id="menuItemPagamentoDebito" mnemonicParsing="false" onAction="#handleMenuItemPagamentoDebito" text="Débito" />
+                        <MenuItem fx:id="menuItemPagamentoCredito" mnemonicParsing="false" onAction="#handleMenuItemPagamentoCredito" text="Crédito" />
+                     </items>
+                  </Menu>
+                  <MenuItem fx:id="menuItemPagamentoPix" mnemonicParsing="false" onAction="#handleMenuItemPagamentoPix" text="Pix" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Relatórios">
+            <items>
+              <MenuItem fx:id="menuItemRelatorioClientes" mnemonicParsing="false" onAction="#handleMenuItemRelatorioClientes" text="Clientes" />
+                  <Menu mnemonicParsing="false" text="Veiculos">
+                    <items>
+                        <MenuItem fx:id="MenuItemRelatorioTodosVeiculos" mnemonicParsing="false" onAction="#handleMenuItemRelatorioTodosVeiculos" text="Todos os Veículos" />
+                      <MenuItem fx:id="menuItemRelatorioPorPlaca" mnemonicParsing="false" onAction="#handleMenuItemRelatorioPorPlaca" text="Por Placa" />
+                        <MenuItem fx:id="menuItemRelatorioPorModelo" mnemonicParsing="false" onAction="#handleMenuItemRelatorioPorModelo" text="Por Modelo" />
+                        <MenuItem fx:id="menuItemRelatorioPorCor" mnemonicParsing="false" onAction="#handleMenuItemRelatorioPorCor" text="Por Cor" />
+                    </items>
+                  </Menu>
+                  <MenuItem fx:id="menuItemRelatorioPrecodeLavacao" mnemonicParsing="false" onAction="#handleMenuItemRelatorioPrecodeLavacao" text="Preços de Lavação" />
+                  <MenuItem fx:id="menuItemRelatorioTotaldeVendasporPeriodo" mnemonicParsing="false" onAction="#handleMenuItemRelatorioTotaldeVendasporPeriodo" text="Total de Vendas por Período" />
+                  <MenuItem fx:id="menuItemRelatorioOrdensdeServicos" mnemonicParsing="false" onAction="#handleMenuItemRelatorioOrdensdeServicos" text="Ordens de Serviço por Periodo" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="375.0" prefWidth="600.0" />
+   </children>
+</VBox>
